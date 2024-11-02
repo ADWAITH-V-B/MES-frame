@@ -1,13 +1,15 @@
-<script>
-if (‘serviceWorker’ in navigator) {
-window.addEventListener(‘load’, function() {
-navigator.serviceWorker.register(‘/service-worker.js’).then(function(registration) {
-// Registration was successful
-console.log(‘ServiceWorker registration successful with scope: ‘, registration.scope);
-}, function(err) {
-// registration failed
-console.log(‘ServiceWorker registration failed: ‘, err);
-});
-});
-}
-</script>
+{
+    "name": "MES",
+    "short_name": "MES",
+    "start_url": "index.html",
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/images/icons/icon-512x512.png",
+        "type": "image/png", "sizes": "512x512"
+      }
+    ]
+  }
