@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Assessment Result</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f5f7fa;
+        }
+        .assessment-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        .status-banner {
+            padding: 25px;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+        }
+        .status-1 { background-color: #d4edda; color: #155724; }
+        .status-2 { background-color: #fff3cd; color: #856404; }
+        .status-3 { background-color: #f8d7da; color: #721c24; }
+        
+        .info-section {
+            padding: 30px;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .info-item {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .info-label {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 5px;
+        }
+        .info-value {
+            font-size: 1.1em;
+            color: #212529;
+        }
+        .section-title {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="assessment-card">
+            <div class="status-banner status-{{ prediction }}">
+                <h2 class="mb-3">Patient Condition Assessment</h2>
+                <h3>
+                    {% if prediction == 1 %}
+                        Patient's Condition: Slightly Injured
+                    {% elif prediction == 2 %}
+                        Patient's Condition: Moderately Injured
+                    {% else %}
+                        Patient's Condition: Severely Injured
+                    {% endif %}
+                </h3>
+            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

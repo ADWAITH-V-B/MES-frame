@@ -1,0 +1,2 @@
+Time,Day_of_week,Age_band_of_driver,Sex_of_driver,Type_of_vehicle,Area_accident_occured,Road_allignment,Types_of_Junction,Road_surface_conditions,Weather_conditions,Type_of_collision,Number_of_casualties,Vehicle_movement,Sex_of_casualty,Age_band_of_casualty
+04:45,Monday,18-30,Male,Automobile,Residential areas,Tangent road with flat terrain,No junction,Dry,Normal,Collision with roadside-parked vehicles,7,Going straight,Male,18-30

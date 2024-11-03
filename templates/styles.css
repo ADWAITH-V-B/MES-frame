@@ -1,0 +1,47 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  h1 {
+    margin-bottom: 30px;
+  }
+  
+  #prediction-results {
+    margin-top: 20px;
+    display: none;
+  }
+  
+  #prediction-results.alert {
+    display: block;
+  }
+  
+  .alert-heading {
+    margin-bottom: 10px;
+  }
+  
+  .prediction-status {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+  
+  .vital-signs, .accident-details {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    margin-bottom: 1rem;
+  }
+  
+  .card {
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-unstyled li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .bg-success { background-color: #28a745 !important; }
+  .bg-warning { background-color: #ffc107 !important; }
+  .bg-danger { background-color: #dc3545 !important; }
+  

@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MES - Medical Emergency System</title>
+  <title>Medical Emergency System</title>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel=”manifest” href=”/manifest.json”>
-  <link rel=”icon” type=”image/png” sizes=”512×512″ href=”/icon.png”>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" sizes="512x512" href="/icon.png">
 </head>
 <body>
   <div class="container mt-5">
-    <h1 class="text-center text-danger">MES</h1>
-    <form id="mesForm">
+    <h1 class="text-center text-danger">Medical Emergency System</h1>
+    <form id="mesForm" action="/submit" method="POST">
       <div class="form-group">
         <label for="age_band_driver">Age Band of Driver</label>
-        <select id="age_band_driver" class="form-control" required>
+        <select id="age_band_driver" name="age_band_driver" class="form-control" required>
           <option value="18-30">18-30</option>
           <option value="31-50">31-50</option>
           <option value="Under 18">Under 18</option>
@@ -26,7 +26,7 @@
 
       <div class="form-group">
         <label for="sex_driver">Sex of Driver</label>
-        <select id="sex_driver" class="form-control" required>
+        <select id="sex_driver" name="sex_driver" class="form-control" required>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
           <option value="Unknown">Unknown</option>
@@ -35,11 +35,11 @@
 
       <div class="form-group">
         <label for="type_vehicle">Type of Vehicle</label>
-        <select id="type_vehicle" class="form-control" required>
+        <select id="type_vehicle" name="type_vehicle" class="form-control" required>
           <option value="Automobile">Automobile</option>
           <option value="Public (> 45 seats)">Public (> 45 seats)</option>
-          <option value="Lorry (41?100Q)">Lorry (41-100Q)</option>
-          <option value="Public (13?45 seats)">Public (13-45 seats)</option>
+          <option value="Lorry (41-100Q)">Lorry (41-100Q)</option>
+          <option value="Public (13-45 seats)">Public (13-45 seats)</option>
           <option value="Long lorry">Long lorry</option>
           <option value="Public (12 seats)">Public (12 seats)</option>
           <option value="Taxi">Taxi</option>
@@ -57,7 +57,7 @@
 
       <div class="form-group">
         <label for="area_accident_occurred">Area Accident Occurred</label>
-        <select id="area_accident_occurred" class="form-control" required>
+        <select id="area_accident_occurred" name="area_accident_occurred" class="form-control" required>
           <option value="Residential areas">Residential areas</option>
           <option value="Office areas">Office areas</option>
           <option value="Recreational area">Recreational area</option>
@@ -74,12 +74,12 @@
       </div>
 
       <div class="form-group">
-        <label for="Road_alingment">Road Alignment</label>
-        <select id="Road_alingment" class="form-control" required>
+        <label for="Road_alignment">Road Alignment</label>
+        <select id="Road_alignment" name="Road_allignment" class="form-control" required>
           <option value="Tangent road with flat terrain">Tangent road with flat terrain</option>
           <option value="Tangent road with mild grade and flat terrain">Tangent road with mild grade and flat terrain</option>
           <option value="Tangent road with rolling terrain">Tangent road with rolling terrain</option>
-          <option value="Tangent road with montainous terrain and">Tangent road with montainous terrain</option>
+          <option value="Tangent road with mountainous terrain">Tangent road with mountainous terrain</option>
           <option value="Steep grade downward with mountainous terrain">Steep grade downward with mountainous terrain</option>
           <option value="Sharp reverse curve">Sharp reverse curve</option>
           <option value="Steep grade upward with mountainous terrain">Steep grade upward with mountainous terrain</option>
@@ -88,7 +88,7 @@
 
       <div class="form-group">
         <label for="Types_of_junction">Types of Junction</label>
-        <select id="Types_of_junction" class="form-control" required>
+        <select id="Types_of_junction" name="Types_of_junction" class="form-control" required>
           <option value="No junction">No junction</option>
           <option value="Y Shape">Y Shape</option>
           <option value="Crossing">Crossing</option>
@@ -102,7 +102,7 @@
 
       <div class="form-group">
         <label for="Road_surface_conditions">Road Surface Conditions</label>
-        <select id="Road_surface_conditions" class="form-control" required>
+        <select id="Road_surface_conditions" name="Road_surface_conditions" class="form-control" required>
           <option value="Dry">Dry</option>
           <option value="Wet or damp">Wet or damp</option>
           <option value="Snow">Snow</option>
@@ -112,7 +112,7 @@
 
       <div class="form-group">
         <label for="Weather_conditions">Weather Conditions</label>
-        <select id="Weather_conditions" class="form-control" required>
+        <select id="Weather_conditions" name="Weather_conditions" class="form-control" required>
           <option value="Normal">Normal</option>
           <option value="Raining">Raining</option>
           <option value="Raining and Windy">Raining and Windy</option>
@@ -127,7 +127,7 @@
 
       <div class="form-group">
         <label for="Type_of_collision">Type of Collision</label>
-        <select id="Type_of_collision" class="form-control" required>
+        <select id="Type_of_collision" name="Type_of_collision" class="form-control" required>
           <option value="Collision with roadside-parked vehicles">Collision with roadside-parked vehicles</option>
           <option value="Vehicle with vehicle collision">Vehicle with vehicle collision</option>
           <option value="Collision with roadside objects">Collision with roadside objects</option>
@@ -143,7 +143,7 @@
 
       <div class="form-group">
         <label for="Vehicle_movement">Vehicle Movement</label>
-        <select id="Vehicle_movement" class="form-control" required>
+        <select id="Vehicle_movement" name="Vehicle_movement" class="form-control" required>
           <option value="Going straight">Going straight</option>
           <option value="U-Turn">U-Turn</option>
           <option value="Moving Backward">Moving Backward</option>
@@ -162,47 +162,37 @@
 
       <div class="form-group">
         <label for="Sex_of_casualty">Sex of Casualty</label>
-        <select id="Sex_of_casualty" class="form-control" required>
+        <select id="Sex_of_casualty" name="Sex_of_casualty" class="form-control" required>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
-          <option value="na">na</option>
+          <option value="Unknown">Unknown</option>
         </select>
       </div>
 
       <div class="form-group">
         <label for="Age_band_of_casualty">Age Band of Casualty</label>
-        <select id="Age_band_of_casualty" class="form-control" required>
-          <option value="na">na</option>
-          <option value="31-50">31-50</option>
+        <select id="Age_band_of_casualty" name="Age_band_of_casualty" class="form-control" required>
           <option value="18-30">18-30</option>
+          <option value="31-50">31-50</option>
           <option value="Under 18">Under 18</option>
           <option value="Over 51">Over 51</option>
+          <option value="Unknown">Unknown</option>
         </select>
       </div>
 
       <div class="form-group">
         <label for="Number_of_casualties">Number of Casualties</label>
-        <select id="Number_of_casualties" class="form-control" required>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="8">Lemniscant</option>
-        </select>
+        <input type="number" id="Number_of_casualties" name="Number_of_casualties" class="form-control" required>
       </div>
-    
+
       <div class="form-group">
         <label for="time">Time</label>
-        <input type="time" id="time" class="form-control" required>
+        <input type="time" id="time" name="time" class="form-control" required>
       </div>
 
       <div class="form-group">
         <label for="day_of_week">Day of Week</label>
-        <select id="day_of_week" class="form-control" required>
+        <select id="day_of_week" name="day_of_week" class="form-control" required>
           <option value="Monday">Monday</option>
           <option value="Tuesday">Tuesday</option>
           <option value="Wednesday">Wednesday</option>
@@ -215,22 +205,22 @@
 
       <div class="form-group">
         <label for="name">Name</label>
-        <input type="text" id="name" class="form-control" required>
+        <input type="text" id="Name" class="form-control" required placeholder="John Doe">
       </div>
 
       <div class="form-group">
         <label for="Oxygen_Saturation">Oxygen Saturation</label>
-        <input type="number" id="Oxygen_Saturation" class="form-control" required>
+        <input type="number" id="Oxygen_Saturation" class="form-control" required placeholder="%">
       </div>
 
       <div class="form-group">
         <label for="Blood_Pressure">Blood Pressure</label>
-        <input type="number" id="Blood_Pressure" class="form-control" required>
+        <input type="number" id="Blood_Pressure" class="form-control" required placeholder="mmHg">
       </div>
 
       <div class="form-group">
         <label for="Heart_Rate">Heart Rate</label>
-        <input type="number" id="Heart_Rate" class="form-control" required>
+        <input type="number" id="Heart_Rate" class="form-control" required placeholder="bpm">
       </div>
 
       <div class="form-group">
@@ -240,16 +230,15 @@
 
       <div class="form-group">
         <label for="Injuries">Injuries</label>
-        <input type="text" id="Injuries" class="form-control" required>
+        <input type="text" id="Injuries" class="form-control" placeholder="attracted to ships">
       </div>
 
-      <button type="submit" class="btn btn-danger btn-block">Submit</button>
+      <button type="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
